@@ -1,0 +1,53 @@
+1)create test.js in visual studio code
+
+2) go to terminal
+
+node test.js
+
+3.
+npm install -g live-server
+
+4.
+live-server -v
+
+5.
+live-server
+
+then automatically open browser and see the message Hellow World
+
+Note: Ctrl+C for terminate
+
+
+
+
+https://babeljs.io/
+
+npm install -g babel-cli
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sample</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>
+
+
+
+console.log("App file")
+
+//var template=<p>Paragraph Tag</p>
+var template = /*#__PURE__*/React.createElement("p", null, "Paragraph Tag");
+var appRoot = document.getElementById("app")
+
+//var template2=<h1>Welcome to ReactJS</h1>
+var template2 = /*#__PURE__*/React.createElement("h1", null, "Welcome to ReactJS");
+
+ReactDOM.render(template2,appRoot)

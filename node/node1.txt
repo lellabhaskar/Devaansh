@@ -1,0 +1,39 @@
+
+step 1:
+
+npm install babel-preset-react babel-preset-env
+
+step 2:
+
+go to cmd :
+
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+and live-server should be run as well
+
+
+node .\arrowFunction.js
+
+step 3:
+
+go to command prompt:
+cmd:
+
+babel playGround/counterApp.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+
+step 4:
+
+>babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+
+setp 5:
+
+live server run under public folder (cd public)
+
+and run bibel
+
+
+
+

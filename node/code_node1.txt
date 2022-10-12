@@ -1,0 +1,37 @@
+var app = {
+    title: 'myBookList',
+    subTitle: "chapter1",
+    options:['book1','book2','book3']  
+}
+
+var user={
+    name: "bhaskar",
+    age: 28
+}
+
+function getAge(age) {
+    return <p>age:{age}</p>    
+}
+
+
+var template2=
+            <div>
+                <h1>{user.name}</h1>
+                <h2>{user.age}</h2>
+                {getAge(user.age)}                
+            </div>
+
+
+
+var template=
+            <div>
+                <h1>{app.title}</h1>
+                <h2>{app.subTitle}</h2>
+                <p>{app.options.length>0?"these are my Options":"No options"}</p>
+                <p>Welcome one  Tag</p>
+                <p>Second  Tag</p>
+            </div>
+
+
+var appRoot = document.getElementById("app")
+ReactDOM.render(template,appRoot)

@@ -1,0 +1,70 @@
+//console.log("Hello welcome to SRC")
+class BookApp extends React.Component{
+    render(){
+        return (
+            <div>
+                <Header />
+                <Action />
+                <Options />
+                <Option />
+                <AddOption />
+            </div>
+        )
+    }
+}
+
+class Header extends React.Component{
+    render(){
+        return (
+            <div>
+                <h1>Books</h1>
+                <h1>Give me a book to Read</h1>
+            </div>
+        )
+    }
+}
+
+class Action extends React.Component{
+    render(){
+        return (
+            <div>
+                <button>Sugget a Book to Me</button>
+            </div>
+        )
+    }
+}
+
+class Options extends React.Component{
+    render(){
+        return (
+            <div>
+                These are my Books
+            </div>
+        )
+    }
+}
+
+class Option extends React.Component{
+    render(){
+        return (
+            <div>
+                These are my Book
+            </div>
+        )
+    }
+}
+
+class AddOption extends React.Component{
+    render(){
+        return (
+            <div>
+                I will add my option here
+            </div>
+        )
+    }
+}
+
+var appRoot = document.getElementById("app")
+//ReactDOM.render(<Header></Header>,app)
+//ReactDOM.render(<Header/>,app)
+ReactDOM.render(<BookApp/>,app)

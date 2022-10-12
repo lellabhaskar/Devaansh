@@ -1,0 +1,19 @@
+go to cmd:
+C:\
+npm install -g create-react-app
+
+ceate-react-app  firstapp
+
+
+go to vs and open firstapp
+and got terminal
+
+
+
+npm start
+
+C:\>cd firstapp
+
+npm install react-router-dom
+
+install Tabnine in vs code
