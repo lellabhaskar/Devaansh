@@ -1,0 +1,34 @@
+cassandra:
+1.cmd --- cassandra
+2.cmd
+cqlsh
+describe keyspaces
+describe keyspace system
+
+
+CREATE KEYSPACE vehicle_tracker WITH REPLICATION = {'class':'SimpleStrategy','replication_factor':1};
+
+use home_security;
+cqlsh:home_security> CREATE TABLE activity(home_id TEXT,
+                 ... datetime TIMESTAMP,
+                 ... event TEXT,
+                 ... code_used TEXT,
+                 ... PRIMARY KEY(home_id,datetime)
+                 ... ) WITH CLUSTERING ORDER BY(datetime DESC);
+
+describe table activity;
+
+INSERT INTO activity (home_id, datetime, event, code_used) VALUES ('H01474777', '2014-05-21 07:32:16', 'alarm set', '5599');
+
+cqlsh:home_security> select *from activity;
+
+create index code_used_index on activity(code_used);
+
+select *from activity where code_used='5599';
+
+describe table activity;
+
+insert into activity(home_id,datetime,event,code_used) values ('H01474778','2014-05-01 07:32:16','alarm set','5599') using TTL 50;
+
+go to new cmd:
+nodetool flush home_security
