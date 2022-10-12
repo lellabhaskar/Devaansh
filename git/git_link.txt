@@ -1,0 +1,24 @@
+https://github.com/SFJBS-FSD-1/test-python-program-lellabhaskar
+
+
+git init
+git status
+
+git add .
+git status
+
+git commit -m "added python test file for checking"
+
+
+change code:
+	print('Hello Good Morning')
+
+
+git status
+
+git remote add origin url
+
+git push -u origin master
+
+
+
